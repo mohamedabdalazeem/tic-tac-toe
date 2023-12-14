@@ -1,0 +1,150 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #494252;
+    color: #c7b68d;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.welcome {
+    text-align: center;
+    font-weight: 900;
+    font-size: larger;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 160px);
+    grid-template-rows: repeat(3, 160px);
+    margin: 20px 10px;
+}
+
+
+.controls{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.game-labels{
+    display: flex;
+    gap: 30px;
+    font-size: 24px;
+}
+.form-input{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.square {
+    border: 2px solid gray;
+    margin: 5px;
+    box-shadow: 1px 2px 4px gray;
+    font-size: 60px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px groove #c7b68d ;
+    border-radius: 10px;
+}
+
+.square:hover {
+    box-shadow: 2px -2px 5px #c79275;
+}
+.name-text{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    color: #c79275;
+}
+.X-mark{
+    color: #6284a1;
+}
+.O-mark{
+    color: #96607f;
+}
+.active {
+}
+
+.win::before{
+    font-size: 15px;
+    content: "win! 👑";
+    display: block;
+    margin: auto;
+ }
+
+ .lose::before {
+    color: #7c9e64;
+    font-size: 15px;
+    content: "🥲";
+    display: block;
+    margin: auto;
+ }
+
+ .draw::before{
+    font-size: 15px;
+    content: "draw";
+    display: block;
+    margin: auto;
+ }
+
+.active::after{
+    content: 'turn';
+    background-color: #7c9e6485;
+    color: white;
+    padding: 2px 4px;
+    font-size: 10px;
+}
+button {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px white;
+
+}
+
+button:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 3px white;
+
+}
+
+label{
+    color: #c79275;
+    font-weight: 700;
+    width: 200px;
+}
+input {
+    padding: 5px;
+    border: 3px groove #c79275;
+    border-radius: 6px;
+    width: 200px;
+    background-color: #55527a;
+    color: wheat;
+    font-size: 17px;
+}
+input::placeholder{
+    color: rgba(245, 222, 179, 0.654);
+}
+
+#start-btn {
+    color: white;
+    background-color: #7c9e64;
+    width: 200px;
+
+}
+#restart-btn {
+    color: white;
+    background-color: #96607f;
+}
