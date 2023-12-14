@@ -45,7 +45,6 @@ const GameController = (board) => {
   const mark = (e) => {
     let position = Number(e.target.id.slice(-1));
     let square = e.target;
-    console.log("position", position);
 
     if (gameEnd) {
       board.removeEventListener("click", mark);
@@ -58,7 +57,6 @@ const GameController = (board) => {
       checkWinDraw(activePlayer);
       if (!gameEnd) {
         switchPlayer();
-        console.log(activePlayer.name);
         display.setTurn(activePlayer.name);
       }
     }
@@ -95,7 +93,6 @@ const GameController = (board) => {
         gameBoard[2] == gameBoard[6] &&
         gameBoard[2] == player.marker)
     ) {
-      console.log(`${player.name} Win!!`);
       gameEnd = true;
       display.setWin(player.name);
       return;
@@ -140,10 +137,6 @@ const displayController = () => {
     namesEl.appendChild(secondLabelEl);
   };
   const setTurn = (player) => {
-    console.log("called with value:", player);
-    console.log("name 1=", name1);
-    console.log("name 2=", name2);
-    console.log("first el:", firstLabelEl);
     if (player == name1) {
       firstLabelEl.classList.add("active");
       secondLabelEl.classList.remove("active");
