@@ -72,8 +72,6 @@ body {
 .O-mark{
     color: #96607f;
 }
-.active {
-}
 
 .win::before{
     font-size: 15px;

@@ -47,7 +47,6 @@ const GameController = (board) => {
     let square = e.target;
 
     if (gameEnd) {
-      board.removeEventListener("click", mark);
       return;
     }
     if (square.innerText == "" && !isNaN(position)) {
@@ -104,12 +103,12 @@ const GameController = (board) => {
   };
 
   const resetGame = () => {
-    gameBoard = ["", "", "", "", "", "", "", "", ""];
-    activePlayer = firstPlayer;
     GameBoard.render();
+    gameBoard = ["", "", "", "", "", "", "", "", ""];
+    display.reset();
+    activePlayer = firstPlayer;
     display.setTurn(firstPlayer.name);
     gameEnd = false;
-    display.reset();
     board.addEventListener("click", mark);
   };
 
